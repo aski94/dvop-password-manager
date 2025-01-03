@@ -17,3 +17,67 @@ Správce hesel má široké využití jak pro jednotlivce, tak pro týmy či fir
 Pro jednotlivce slouží k bezpečnému ukládání a správě hesel na osobní úrovni. 
 Pro týmy poskytuje snadný způsob, jak sdílet přístupové údaje například k týmovým účtům nebo firemním systémům, a to s možností detailní kontroly nad tím, kdo má k heslům přístup, co s nimi může dělat a kdy s nimi a jakým způsobem zacházel.  
 
+# Entity
+
+## Uživatel
+
+Tato entita reprezentuje jednotlivého uživatele systému a jeho interakci s API.  
+
+- **Atributy:**  
+  - Uživatelské ID (unikátní identifikátor).  
+  - Uživatelské jméno.  
+  - Emailová adresa.  
+  - Role (např. administrátor, běžný uživatel).  
+  - Přihlašovací údaje (uložené bezpečně a šifrované).
+    
+- **Funkce:**  
+  - Registrace a přihlášení do systému.  
+  - Správa osobních nastavení a profilových údajů.  
+  - Přidělování práv pro přístup k heslům nebo skupinám.  
+
+## Skupina 
+
+Tato entita umožňuje vytváření skupin, ve kterých mohou uživatelé sdílet hesla.  
+
+- **Atributy:**  
+  - ID skupiny (unikátní identifikátor).  
+  - Název skupiny (např. „Marketing Team“).  
+  - Seznam členů.  
+  - Sdílená hesla.
+    
+- **Funkce:**  
+  - Přidávání nebo odebírání členů.  
+  - Správa oprávnění členů (např. pouze čtení, čtení a editace).  
+  - Sdílení hesel mezi členy skupiny.  
+
+## Hesla
+
+Entita hesla slouží k ukládání a správě přístupových údajů jednotlivých uživatelů nebo skupin.  
+
+- **Atributy:**  
+  - ID hesla (unikátní identifikátor).  
+  - Název účtu nebo služby (např. „Gmail“).  
+  - Šifrované heslo.  
+  - URL nebo poznámka (např. „https://mail.google.com“).  
+  - Metadata (datum vytvoření, poslední aktualizace).
+    
+- **Funkce:**  
+  - Ukládání nových hesel.  
+  - Úprava a mazání existujících hesel.  
+  - Zobrazení hesel autorizovaným uživatelům.  
+
+## Log
+
+Tato entita zajišťuje zaznamenávání všech akcí, které proběhnou v systému.  
+
+- **Atributy:**  
+  - ID záznamu (unikátní identifikátor).  
+  - Čas akce.  
+  - Typ akce (např. „zobrazení hesla“, „úprava hesla“).  
+  - Uživatelské ID, které akci provedlo.  
+  - Cílová entita (např. konkrétní heslo nebo skupina).
+  
+- **Funkce:**  
+  - Monitoring aktivit v systému.  
+  - Poskytování dat pro analýzu a bezpečnostní audity.  
+  - Export logů pro správce systému.  
