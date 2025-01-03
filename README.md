@@ -22,15 +22,9 @@ Pro týmy poskytuje snadný způsob, jak sdílet přístupové údaje napříkla
 
 Tato entita reprezentuje jednotlivého uživatele systému a jeho interakci s API.  
 - **Atributy:**  
-  - Uživatelské ID
+  - ID uživatele
   - Uživatelské jméno
-  - Emailová adresa
-  - Role (např. administrátor, běžný uživatel)
-  - Přihlašovací údaje (šifrované)
-- **Funkce:**
-  - Registrace a přihlášení do systému
-  - Správa osobních nastavení a profilových údajů
-  - Přidělování práv pro přístup k heslům nebo skupinám
+  - Heslo
 
 ## Skupina 
 
@@ -39,36 +33,21 @@ Tato entita umožňuje vytváření skupin, ve kterých mohou uživatelé sdíle
   - ID skupiny
   - Název skupiny
   - Seznam členů
-  - Sdílená hesla
-- **Funkce:**  
-  - Přidávání nebo odebírání členů
-  - Správa oprávnění členů (např. pouze čtení, čtení a editace) 
-  - Sdílení hesel mezi členy skupiny
 
 ## Hesla
 
 Entita hesla slouží k ukládání a správě přístupových údajů jednotlivých uživatelů nebo skupin.  
 - **Atributy:**  
   - ID hesla
-  - Název účtu nebo služby
-  - Šifrované heslo
-  - URL nebo poznámka
+  - URL nebo popis
+  - Uživatelské jméno
+  - Heslo
   - Metadata (datum vytvoření, poslední aktualizace)
-- **Funkce:**  
-  - Ukládání nových hesel
-  - Úprava a mazání existujících hesel
-  - Zobrazení hesel autorizovaným uživatelům 
 
 ## Log
 
 Tato entita zajišťuje zaznamenávání všech akcí, které proběhnou v systému.  
 - **Atributy:**
-  - ID záznamu
-  - Čas akce
+  - ID uživatele
   - Typ akce (např. „zobrazení hesla“, „úprava hesla“)
-  - Uživatelské ID, které akci provedlo
-  - Cílová entita (např. konkrétní heslo nebo skupina)
-- **Funkce:**
-  - Monitoring aktivit v systému
-  - Poskytování dat pro analýzu a bezpečnostní audity
-  - Export logů pro správce systému
+  - Datum akce
