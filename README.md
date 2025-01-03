@@ -1,5 +1,3 @@
-# dvop-password-manager
-
 # Analýza tématu závěrečné práce: Password Manager API  
 
 ## Popis projektu
