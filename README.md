@@ -1,5 +1,3 @@
-Analýza tématu závěrečné práce: Password Manager API  
-
 # Popis projektu
 
 Projekt se zaměřuje na vývoj API služby pro správu hesel, která umožní bezpečné ukládání, zobrazení, úpravu a sdílení hesel mezi jednotlivci i skupinami uživatelů. Projekt bude zahrnovat návrh a implementaci celé služby včetně základního frontendu pro interakci uživatelů.
